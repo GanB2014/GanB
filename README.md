@@ -11,57 +11,7 @@
 
 ---
 
-## 📁 폴더 구조
-
-📁 gproject/
-├── 📁 backend/
-│   ├── .env                        # 환경 변수 설정
-│   ├── alembic.ini                 # Alembic 설정 파일
-│   ├── requirements.txt            # Python 의존성
-│   ├── database.py                 # DB 세션 및 연결
-│   ├── main.py                     # FastAPI 진입점
-│   ├── models.py                   # SQLAlchemy 모델
-│   ├── schemas.py                  # Pydantic 스키마
-│   ├── 📁 alembic/                 # 마이그레이션 폴더
-│   ├── 📁 uploads/                 # 업로드된 이미지 저장
-│   ├── 📁 venv/                    # 가상환경
-│   └── 📁 routes/
-│       ├── admin.py                # 관리자 기능
-│       ├── auth.py                 # 로그인/회원가입
-│       ├── comments.py             # 댓글/대댓글 기능
-│       ├── notifications.py        # 알림 기능
-│       ├── posts.py                # 게시글 CRUD
-│       ├── upload.py               # 이미지 업로드
-│       └── user.py                 # 프로필, 내 글/댓글
-
-├── 📁 frontend/
-│   ├── package.json                # npm 의존성 목록
-│   ├── package-lock.json           # npm 버전 고정
-│   ├── .gitignore                  # Git 무시 설정
-│   ├── README.md                   # 프론트엔드 README
-│   ├── 📁 public/                  # 정적 파일 (index.html 등)
-│   ├── 📁 node_modules/            # 의존성 모듈
-│   └── 📁 src/
-│       ├── index.js                # 앱 진입점
-│       ├── index.css               # 전체 스타일
-│       ├── App.js                  # 라우팅 및 전체 구조
-│       ├── 📁 api/                 # API 호출 모듈
-│       ├── 📁 context/
-│       │   └── AuthContext.js      # 로그인 상태 전역 관리
-│       ├── 📁 components/
-│       │   ├── NotificationDropdown.js  # 알림 드롭다운
-│       │   ├── PostDetail.js       # 게시글 상세 (컴포넌트)
-│       │   └── PostItem.js         # 게시글 목록 항목
-│       └── 📁 pages/
-│           ├── PostList.js         # 게시글 목록
-│           ├── PostDetail.js       # 게시글 + 댓글 보기
-│           ├── CreatePost.js       # 글 작성
-│           ├── EditPost.js         # 글 수정
-│           ├── MyProfile.js        # 내 글/댓글/닉네임 변경
-│           ├── Register.js         # 회원가입
-│           ├── Notifications.js    # 전체 알림 보기
-│           ├── AdminUserPage.js    # 관리자 - 사용자 관리
-│           └── AdminPostPage.js    # 관리자 - 게시글/댓글 관리
+gproject/ ├── backend/ │ ├── .env │ ├── alembic.ini │ ├── requirements.txt │ ├── database.py │ ├── main.py │ ├── models.py │ ├── schemas.py │ ├── uploads/ │ ├── venv/ │ └── routes/ │ ├── admin.py # 관리자 기능 │ ├── auth.py # 회원가입/로그인 │ ├── comments.py # 댓글, 대댓글, 이미지 업로드 포함 │ ├── notifications.py # 알림 기능 │ ├── posts.py # 게시글 기능 │ ├── upload.py # 이미지 업로드 전용 │ └── user.py # 프로필, 내가 쓴 글/댓글 ├── frontend/ │ ├── .gitignore │ ├── README.md │ ├── package.json │ ├── package-lock.json │ ├── public/ │ └── src/ │ ├── index.js │ ├── index.css │ ├── App.js │ ├── api/ │ ├── context/ │ │ └── AuthContext.js │ ├── components/ │ │ ├── NotificationDropdown.js │ │ ├── PostDetail.js │ │ └── PostItem.js │ └── pages/ │ ├── PostList.js │ ├── PostDetail.js │ ├── CreatePost.js │ ├── EditPost.js │ ├── MyProfile.js │ ├── Register.js │ ├── Notifications.js │ ├── AdminUserPage.js │ └── AdminPostPage.js
 
 
 ---

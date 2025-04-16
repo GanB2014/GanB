@@ -13,7 +13,56 @@
 
 ## 📁 폴더 구조
 
-gproject/ ├── backend/ │ ├── .env │ ├── alembic.ini │ ├── requirements.txt │ ├── database.py │ ├── main.py │ ├── models.py │ ├── schemas.py │ ├── uploads/ │ ├── venv/ # 가상환경 (제외 가능) │ └── routes/ │ ├── admin.py # 관리자 기능 (회원 관리, 강제 삭제 등) │ ├── auth.py # 회원가입, 로그인, JWT │ ├── comments.py # 댓글, 대댓글 │ ├── notifications.py # 알림 기능 │ ├── posts.py # 게시글 관련 기능 │ ├── upload.py # 이미지 업로드 전용 │ └── user.py # 프로필, 내가 쓴 글/댓글 │ ├── frontend/ │ ├── .gitignore │ ├── README.md │ ├── package.json │ ├── package-lock.json │ ├── public/ │ └── src/ │ ├── index.js │ ├── index.css │ ├── App.js │ ├── api/ │ ├── context/ │ │ └── AuthContext.js │ ├── components/ │ │ ├── NotificationDropdown.js │ │ ├── PostItem.js │ │ └── PostDetail.js │ └── pages/ │ ├── PostList.js │ ├── PostDetail.js │ ├── CreatePost.js │ ├── EditPost.js │ ├── MyProfile.js │ ├── Register.js │ ├── Notifications.js │ ├── AdminUserPage.js │ └── AdminPostPage.js
+
+## ✅ Backend (/backend)
+📦backend
+ ┣ 📜.env                      # 환경 변수 설정 파일
+ ┣ 📜alembic.ini              # Alembic 설정 파일 (마이그레이션 도구 설정)
+ ┣ 📜requirements.txt         # 백엔드 패키지 의존성 목록
+ ┣ 📜database.py              # DB 연결 및 SQLAlchemy 설정
+ ┣ 📜main.py                  # FastAPI 앱 실행 파일 (라우터 등록 포함)
+ ┣ 📜models.py                # SQLAlchemy ORM 모델 정의 (User, Post, Comment 등)
+ ┣ 📜schemas.py               # Pydantic 스키마 정의 (요청/응답 모델)
+ ┣ 📂uploads/                 # 업로드 이미지 저장 폴더
+ ┣ 📂venv/                    # 가상환경 (제출 제외)
+ ┗ 📂routes/                  # FastAPI 라우터 모듈들
+   ┣ 📜admin.py               # 관리자 기능 (회원 정지/삭제, 게시글/댓글 강제 삭제 등)
+   ┣ 📜auth.py                # 회원가입, 로그인 및 JWT 인증 관련 기능
+   ┣ 📜comments.py            # 댓글/대댓글 작성, 조회, 수정, 삭제 및 알림 기능
+   ┣ 📜notifications.py       # 알림 목록 조회, 읽음 처리, 삭제 기능
+   ┣ 📜posts.py               # 게시글 CRUD 및 목록 조회 (검색, 페이지네이션 포함)
+   ┣ 📜upload.py              # 파일 업로드 테스트용 (사용 안함)
+   ┗ 📜user.py                # 닉네임 변경, 내가 쓴 글/댓글 목록 조회 기능
+
+
+## ✅ Frontend (/frontend)
+   📦frontend
+ ┣ 📜.gitignore               # Git에 포함되지 않을 파일/폴더 설정
+ ┣ 📜README.md                # 프론트엔드 관련 설명 (선택사항)
+ ┣ 📜package.json             # 프론트엔드 패키지 의존성 목록
+ ┣ 📜package-lock.json        # 패키지 버전 잠금 파일
+ ┣ 📂public/                  # HTML 템플릿 등 공개 정적 파일
+ ┗ 📂src/
+   ┣ 📜index.js               # React 진입점 (ReactDOM 렌더링)
+   ┣ 📜index.css              # 전체 스타일 초기화 및 설정
+   ┣ 📜App.js                 # 전체 라우팅 구성
+   ┣ 📂api/                   # Axios API 모듈 관리 (현재 비어있을 수 있음)
+   ┣ 📂context/
+   ┃ ┗ 📜AuthContext.js       # 로그인 상태 및 토큰 저장을 위한 전역 컨텍스트
+   ┣ 📂components/
+   ┃ ┣ 📜NotificationDropdown.js # 헤더 우측 알림 드롭다운 UI
+   ┃ ┣ 📜PostDetail.js            # (이전 버전) 게시글 상세 내용 컴포넌트
+   ┃ ┗ 📜PostItem.js              # 게시글 목록에서 한 개 항목을 나타내는 컴포넌트
+   ┗ 📂pages/
+     ┣ 📜PostList.js           # 게시글 목록 조회 및 검색, 페이지네이션
+     ┣ 📜PostDetail.js         # 게시글 상세 페이지 (댓글/대댓글 포함)
+     ┣ 📜CreatePost.js         # 게시글 작성 폼
+     ┣ 📜EditPost.js           # 게시글 수정 폼
+     ┣ 📜MyProfile.js          # 내 프로필 (닉네임 변경, 내가 쓴 글/댓글)
+     ┣ 📜Register.js           # 회원가입 화면
+     ┣ 📜Notifications.js      # 전체 알림 목록 확인 화면
+     ┣ 📜AdminUserPage.js      # 관리자용 유저 목록 관리 (정지/삭제)
+     ┗ 📜AdminPostPage.js      # (옵션) 관리자용 게시글 관리 페이지
 
 
 ---

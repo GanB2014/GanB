@@ -167,7 +167,7 @@ npm start
 - is_deleted가 True인 유저는 삭제된 유저로 간주하며 게시글/댓글에서 '탈퇴한 사용자'로 표시됨
 
 
--.env 파일에는 아래와 같은 정보가 들어가야 합니다:
+- .env 파일에는 아래와 같은 정보가 들어가야 합니다:
 - SECRET_KEY=your_secret
 - ALGORITHM=HS256
 - MYSQL_HOST=localhost

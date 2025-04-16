@@ -12,7 +12,22 @@
 ---
 
 ## 📁 폴더 구조
-
+📦routes
+ ┣ 📂__pycache__
+ ┃ ┣ 📜admin.cpython-311.pyc
+ ┃ ┣ 📜auth.cpython-311.pyc
+ ┃ ┣ 📜comments.cpython-311.pyc
+ ┃ ┣ 📜notifications.cpython-311.pyc
+ ┃ ┣ 📜posts.cpython-311.pyc
+ ┃ ┣ 📜upload.cpython-311.pyc
+ ┃ ┗ 📜user.cpython-311.pyc
+ ┣ 📜admin.py
+ ┣ 📜auth.py
+ ┣ 📜comments.py
+ ┣ 📜notifications.py
+ ┣ 📜posts.py
+ ┣ 📜upload.py
+ ┗ 📜user.py
 
 ## ✅ Backend (/backend)
 📦backend

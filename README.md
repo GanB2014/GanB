@@ -9,9 +9,9 @@
 ---
 
 ### 화면 구성
-|Screen #1|Screen #2|Screen #3|Screen #4|Screen #5|Screen #6|Screen #7|Screen #8|Screen #9|
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|![Image](https://github.com/user-attachments/assets/500cffbb-c71f-4e89-b2dc-404fe993f53b)|![Image](https://github.com/user-attachments/assets/40436f39-4ba5-4580-93cd-295e4be9e8d9)|![Image](https://github.com/user-attachments/assets/077d2b30-3d04-47a5-8e1d-85bea808d7e4)|![Image](https://github.com/user-attachments/assets/7b6ef4e9-6bfa-4259-a01f-b523998671ff)|![Image](https://github.com/user-attachments/assets/827a7c1f-b265-4c71-859e-5a563b3cf991)|![Image](https://github.com/user-attachments/assets/f2c703ff-9eef-4708-b1fe-27a7b1317346)|![Image](https://github.com/user-attachments/assets/cbfeb667-2a72-46e7-80df-7becb794d323)|![Image](https://github.com/user-attachments/assets/06847271-5641-4f61-bad2-d812b94d29f5)|![Image](https://github.com/user-attachments/assets/7e543885-aa8e-4adb-a8ce-de7d6d300444)|![Image](https://github.com/user-attachments/assets/d43b27f4-f8b7-48d6-b98e-3fea943f2dbb)
+|Screen #1|Screen #2|Screen #3|Screen #4|Screen #5|Screen #6|Screen #7|Screen #8|Screen #9|Screen #10|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|![Image](https://github.com/user-attachments/assets/500cffbb-c71f-4e89-b2dc-404fe993f53b)|![Image](https://github.com/user-attachments/assets/40436f39-4ba5-4580-93cd-295e4be9e8d9)|![Image](https://github.com/user-attachments/assets/077d2b30-3d04-47a5-8e1d-85bea808d7e4)|![Image](https://github.com/user-attachments/assets/7b6ef4e9-6bfa-4259-a01f-b523998671ff)|![Image](https://github.com/user-attachments/assets/827a7c1f-b265-4c71-859e-5a563b3cf991)|![Image](https://github.com/user-attachments/assets/f2c703ff-9eef-4708-b1fe-27a7b1317346)|![Image](https://github.com/user-attachments/assets/cbfeb667-2a72-46e7-80df-7becb794d323)|![Image](https://github.com/user-attachments/assets/06847271-5641-4f61-bad2-d812b94d29f5)|![Image](https://github.com/user-attachments/assets/7e543885-aa8e-4adb-a8ce-de7d6d300444)|![Image](https://github.com/user-attachments/assets/d43b27f4-f8b7-48d6-b98e-3fea943f2dbb)|![전체알림](https://github.com/user-attachments/assets/e49f49de-7094-4c40-bfd7-930455c063e4)
 
 
 ## 📁 폴더 구조

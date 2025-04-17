@@ -9,7 +9,7 @@
 ---
 
 ### 화면 구성
-|Screen #1|Screen #2|
+|Screen #1|Screen #2|Screen #3|
 |:---:|:---:|
 ![Image](https://github.com/user-attachments/assets/500cffbb-c71f-4e89-b2dc-404fe993f53b)
 

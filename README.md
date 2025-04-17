@@ -10,8 +10,9 @@
 
 ### 화면 구성
 |Screen #1|Screen #2|Screen #3|
-|:---:|:---:|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 ![Image](https://github.com/user-attachments/assets/500cffbb-c71f-4e89-b2dc-404fe993f53b)
+![Image](https://github.com/user-attachments/assets/40436f39-4ba5-4580-93cd-295e4be9e8d9)
 
 ---
 ## 📁 폴더 구조

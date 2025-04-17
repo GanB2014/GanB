@@ -14,9 +14,18 @@
 |![1  게시글 목록2](https://github.com/user-attachments/assets/098a976b-ab3d-4357-84b7-c1d98094740a)|![2  회원가입](https://github.com/user-attachments/assets/ddaf51d0-025e-43fa-8f8d-b7180d8e2773)|![3  게시글 목록](https://github.com/user-attachments/assets/f16e27bb-bfd7-45d6-ab14-18cbe446e3a6)|
 
 
-|게시글 목록 #1|회원가입 #2|로그인 #3|
+|글 작성 #4|게시글 내용 #5|알림 #6|전체알림 #7|
+|:---:|:---:|:---:|:---:|
+|![4  글 작성](https://github.com/user-attachments/assets/77922e9d-ab1f-49c6-bdd0-32ec0d94fc19)|![5  게시글 내용](https://github.com/user-attachments/assets/ebb27a21-c194-4c72-8b54-f9be7280056a)|![6  알림](https://github.com/user-attachments/assets/b455bc59-a65a-4771-8c68-a03b80f20e68)|![6 1 전체알림](https://github.com/user-attachments/assets/97f9528f-352c-4765-b23b-0f0f991b1677)|
+
+
+|프로필 #1|관리자 #2|게시글 정렬 #3|
 |:---:|:---:|:---:|
-|![4  글 작성](https://github.com/user-attachments/assets/77922e9d-ab1f-49c6-bdd0-32ec0d94fc19)
+|![7  프로필](https://github.com/user-attachments/assets/ec0bdf25-2f53-4633-9247-8ef8c0d2ae9e)|![8  관리자](https://github.com/user-attachments/assets/a8f605e2-7826-412d-a39f-3d93192e04ae)|![9  최신순](https://github.com/user-attachments/assets/047effb4-4d18-4fff-8f9e-54dae214f0cf)|
+
+
+
+
 
 
 

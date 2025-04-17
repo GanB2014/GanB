@@ -9,7 +9,7 @@
 ---
 
 ### 구성
-|Screen #1|Screen #2|Screen #3|Screen #4|Screen #5|Screen #6|Screen #7|Screen #8|Screen #9|Screen #10|
+|게시글 목록 #1|회원가입 #2|로그인 #3|글 작성 #4|게시글 내용 #5|알림 #6|전체알림 #7|프로필 #8|관리자 #9|게시글 필터 #10|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |![게시글 목록2](https://github.com/user-attachments/assets/78926b4a-d4b7-4457-bfb2-6e960adc0369)|![2  회원가입](https://github.com/user-attachments/assets/9efac6a0-d4ed-407e-a1b8-5609622cbf61)|![3  게시글 목록](https://github.com/user-attachments/assets/0d006ec4-2f5f-458f-bda1-9bf03cc3cf35)|![4  글 작성](https://github.com/user-attachments/assets/2067659a-c022-4581-b7a0-15e0e8317203)|![5  게시글 내용](https://github.com/user-attachments/assets/46fa0fcd-754c-4681-a907-6c0eb26e2807)|![6  알림](https://github.com/user-attachments/assets/a87d525b-83cb-4478-acd4-affe1bb45878)|![6 1 전체알림](https://github.com/user-attachments/assets/f02474dd-3473-487a-9d23-92d69f09df36)|![7  프로필](https://github.com/user-attachments/assets/1faea3ee-d20a-4030-9879-50f30c001407)|![8  관리자](https://github.com/user-attachments/assets/db509138-0d33-41bf-9cd1-99ba6a332623)|![9  최신순](https://github.com/user-attachments/assets/6d5b6f6f-cb57-469c-91a9-c09b10416e14)|
 

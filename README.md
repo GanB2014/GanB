@@ -11,16 +11,7 @@
 ### 화면 구성
 |Screen #1|Screen #2|Screen #3|Screen #4|Screen #5|Screen #6|Screen #7|Screen #8|Screen #9|Screen #10|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|![게시글 내용](https://github.com/user-attachments/assets/0c840a4d-9f9e-4273-9f6a-b1124a42d9fa)|
-![회원가입](https://github.com/user-attachments/assets/ca2810eb-8468-4fcf-93b4-6723fe1ddf5c)|
-![프로필](https://github.com/user-attachments/assets/0cc05b8d-d65f-44ad-8268-9420a9558288)|
-![최신순](https://github.com/user-attachments/assets/9cf3c052-bd76-4424-be26-3be35c23c76e)|
-![전체알림](https://github.com/user-attachments/assets/f79f9ba8-3b51-4b7b-82d6-504320bd08ed)|
-![알림](https://github.com/user-attachments/assets/0886b6f0-69a3-4c4d-849f-7c27237866e7)|
-![글 작성](https://github.com/user-attachments/assets/3730a5e9-7ea6-43fa-ba95-cec2b86205de)|
-![관리자](https://github.com/user-attachments/assets/2298c107-018f-4d85-88d4-746993a33999)|
-![게시글 목록2](https://github.com/user-attachments/assets/509cea4f-baae-4666-ad22-1cb83fc3d0aa)|
-|![게시글 목록](https://github.com/user-attachments/assets/07303ae1-eac0-474a-a2f6-70a30a7e0cad)|
+|![게시글 내용](https://github.com/user-attachments/assets/0c840a4d-9f9e-4273-9f6a-b1124a42d9fa)|![회원가입](https://github.com/user-attachments/assets/ca2810eb-8468-4fcf-93b4-6723fe1ddf5c)|![프로필](https://github.com/user-attachments/assets/0cc05b8d-d65f-44ad-8268-9420a9558288)|![최신순](https://github.com/user-attachments/assets/9cf3c052-bd76-4424-be26-3be35c23c76e)|![전체알림](https://github.com/user-attachments/assets/f79f9ba8-3b51-4b7b-82d6-504320bd08ed)|![알림](https://github.com/user-attachments/assets/0886b6f0-69a3-4c4d-849f-7c27237866e7)|![글 작성](https://github.com/user-attachments/assets/3730a5e9-7ea6-43fa-ba95-cec2b86205de)|![관리자](https://github.com/user-attachments/assets/2298c107-018f-4d85-88d4-746993a33999)|![게시글 목록2](https://github.com/user-attachments/assets/509cea4f-baae-4666-ad22-1cb83fc3d0aa)|![게시글 목록](https://github.com/user-attachments/assets/07303ae1-eac0-474a-a2f6-70a30a7e0cad)|
 
 
 

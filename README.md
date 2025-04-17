@@ -11,7 +11,7 @@
 ### 화면 구성
 |Screen #1|Screen #2|
 |:---:|:---:|
-|<img src="https://github.com/user-attachments/assets/500cffbb-c71f-4e89-b2dc-404fe993f53b.png width="400"/>|<img 
+![Image](https://github.com/user-attachments/assets/500cffbb-c71f-4e89-b2dc-404fe993f53b)
 
 ---
 ## 📁 폴더 구조

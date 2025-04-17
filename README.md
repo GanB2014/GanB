@@ -81,7 +81,8 @@
 
 |프로필 #8|관리자 #9|게시글 정렬 #10|게시글 정렬2 #11|
 |:---:|:---:|:---:|:---:|
-|![7  프로필](https://github.com/user-attachments/assets/ec0bdf25-2f53-4633-9247-8ef8c0d2ae9e)|![8  관리자](https://github.com/user-attachments/assets/a8f605e2-7826-412d-a39f-3d93192e04ae)|![9  최신순](https://github.com/user-attachments/assets/047effb4-4d18-4fff-8f9e-54dae214f0cf)|![10  오래된 순](https://github.com/user-attachments/assets/ebd4e3c3-3131-49e7-9292-7e2b26ea132a)|
+|![7  프로필](https://github.com/user-attachments/assets/ec0bdf25-2f53-4633-9247-8ef8c0d2ae9e)|![8  관리자](https://github.com/user-attachments/assets/a8f605e2-7826-412d-a39f-3d93192e04ae)|![9  최신순](https://github.com/user-attachments/assets/047effb4-4d18-4fff-8f9e-54dae214f0cf)|![10  오래된 순](https://github.com/user-attachments/assets/fe4496d9-a9a1-42ac-a492-dc6f18148e8a)|
+
 
 
 ---

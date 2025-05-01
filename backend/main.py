@@ -2,21 +2,20 @@ from fastapi import FastAPI
 from routes import posts, upload, comments, auth, admin, notifications, user
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
-
-
-# 🔧 DB 테이블 자동 생성
 from database import engine
-from models import Base
-
-# DB 테이블을 자동으로 생성
-Base.metadata.create_all(bind=engine)
+from models import create_all_database
 
 app = FastAPI()
+
+@app.on_event("startup")
+def startup():
+    create_all_database()
+
 
 # ✅ CORS 설정: 특정 도메인에서의 접근을 허용
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # React 클라이언트가 http://localhost:3000에서 동작한다고 가정
+    allow_origins=["*"],  # React 클라이언트가 http://localhost:3000에서 동작한다고 가정
     allow_credentials=True,
     allow_methods=["*"],  # 모든 HTTP 메서드 허용
     allow_headers=["*"],  # 모든 HTTP 헤더 허용

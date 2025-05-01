@@ -30,6 +30,7 @@ def get_connection():
     MySQL Connector를 사용하여 데이터베이스에 직접 연결
     """
     try:
+        print(DB_URL)
         conn = mysql.connector.connect(
             user=DB_USER,
             password=DB_PASSWORD,
@@ -38,9 +39,8 @@ def get_connection():
             database=DB_NAME
         )
         return conn
-    except mysql.connector.Error as err:
-        print(f"Error: {err}")
-        return None
+    except:
+        pass
 
 # ✅ SQLAlchemy 세션 의존성 함수 (SQLAlchemy 세션용)
 def get_db():

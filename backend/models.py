@@ -1,10 +1,16 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text, Boolean
-from sqlalchemy.orm import relationship
+from sqlalchemy import func
+from sqlalchemy.orm import relationship, DeclarativeBase
 from datetime import datetime
-from database import Base  # Base는 database.py에서 import한 것
+from database import engine
+
+
+class Root(DeclarativeBase):
+    pass
+
 
 # 📌 User 모델 (사용자)
-class User(Base):
+class User(Root):
     __tablename__ = "users"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -22,7 +28,7 @@ class User(Base):
 
 
 # 📌 Post 모델 (게시글)
-class Post(Base):
+class Post(Root):
     __tablename__ = "posts"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -37,7 +43,7 @@ class Post(Base):
 
 
 # 📌 Comment 모델 (댓글)
-class Comment(Base):
+class Comment(Root):
     __tablename__ = "comments"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -54,7 +60,7 @@ class Comment(Base):
     owner = relationship("User", back_populates="comments")
 
 # 📌 Notification 모델 (알림)
-class Notification(Base):
+class Notification(Root):
     __tablename__ = "notifications"
 
     id = Column(Integer, primary_key=True, index=True)
@@ -68,3 +74,7 @@ class Notification(Base):
 
     user = relationship("User", backref="notifications")
 
+def create_all_database():
+    print("Load auto generation schema...")
+    print(Root.metadata.tables.keys())
+    Root.metadata.create_all(bind=engine)

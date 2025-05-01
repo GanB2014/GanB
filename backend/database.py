@@ -8,6 +8,7 @@ import mysql.connector
 load_dotenv()
 
 # 환경 변수에서 DB 설정 가져오기
+# TODO: dotenv 대신 configparser 사용
 DB_USER = os.getenv('DB_USER')
 DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_HOST = os.getenv('DB_HOST')

@@ -166,7 +166,7 @@
 
 ## 📦 실행 방법
 
-### 🔧 백엔드 실행
+### 백엔드 실행
 
 ```bash
 cd backend
@@ -176,7 +176,7 @@ pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 
-### 🌐 프론트엔드 실행
+### 프론트엔드 실행
 ```bash
 cd frontend
 npm install

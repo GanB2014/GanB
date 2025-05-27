@@ -40,8 +40,9 @@ def get_connection():
             database=DB_NAME
         )
         return conn
-    except:
-        pass
+    except mysql.connector.Error as err:
+        print(f"Error: {err}")
+        return None
 
 # ✅ SQLAlchemy 세션 의존성 함수 (SQLAlchemy 세션용)
 def get_db():

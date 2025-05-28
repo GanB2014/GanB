@@ -19,7 +19,7 @@ class PostBase(BaseModel):
     content: str
     image_url: Optional[str] = None
 
-# ✅ 게시글 작성
+#  게시글 작성
 @router.post("/posts/")
 async def create_post_with_image(
     title: str = Form(...),
@@ -55,7 +55,7 @@ async def create_post_with_image(
             conn.close()
     raise HTTPException(status_code=500, detail="데이터베이스 연결 실패")
 
-# ✅ 게시글 목록 조회
+#  게시글 목록 조회
 @router.get("/posts/")
 def get_posts(
     page: int = Query(1, ge=1),
@@ -117,7 +117,7 @@ def get_posts(
 
     raise HTTPException(status_code=500, detail="데이터베이스 연결 실패")
 
-# ✅ 게시글 단일 조회
+#  게시글 단일 조회
 @router.get("/posts/{post_id}")
 def get_post(post_id: int):
     conn = get_connection()
@@ -139,7 +139,7 @@ def get_post(post_id: int):
         raise HTTPException(status_code=404, detail="게시글을 찾을 수 없습니다.")
     raise HTTPException(status_code=500, detail="데이터베이스 연결 실패")
 
-# ✅ 게시글 삭제
+#  게시글 삭제
 @router.delete("/posts/{post_id}")
 def delete_post(post_id: int, current_user: UserInfo = Depends(get_current_user)):
     conn = get_connection()
@@ -171,7 +171,7 @@ def delete_post(post_id: int, current_user: UserInfo = Depends(get_current_user)
             conn.close()
     raise HTTPException(status_code=500, detail="데이터베이스 연결 실패")
 
-# ✅ 게시글 수정
+#  게시글 수정
 @router.patch("/posts/{post_id}")
 async def update_post(
     post_id: int,

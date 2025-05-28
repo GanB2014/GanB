@@ -18,7 +18,7 @@ router = APIRouter(
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-# ✅ 댓글 작성
+#  댓글 작성
 @router.post("/", response_model=CommentResponse)
 async def create_comment(
     content: str = Form(...),
@@ -59,7 +59,7 @@ async def create_comment(
     db.add(new_comment)
     db.flush()
 
-    # 🔔 알림 생성
+    #  알림 생성
     if parent_id:
         parent_comment = db.query(Comment).filter(Comment.id == parent_id).first()
         if parent_comment and parent_comment.user_id != current_user.id:
@@ -89,7 +89,7 @@ async def create_comment(
     db.refresh(new_comment)
     return new_comment
 
-# ✅ 댓글 트리 조회
+#  댓글 트리 조회
 @router.get("/{post_id}", response_model=List[CommentResponse])
 def get_comments(post_id: int, db: Session = Depends(get_db)):
     all_comments = db.query(Comment).filter(Comment.post_id == post_id).all()
@@ -114,7 +114,7 @@ def get_comments(post_id: int, db: Session = Depends(get_db)):
 
     return root_comments
 
-# ✅ 댓글 삭제
+#  댓글 삭제
 @router.delete("/{comment_id}")
 def delete_comment(
     comment_id: int,
@@ -127,7 +127,7 @@ def delete_comment(
     if comment.user_id != current_user.id:
         raise HTTPException(status_code=403, detail="댓글 삭제 권한이 없습니다.")
 
-    # 🔁 관련 알림 먼저 삭제
+    #  관련 알림 먼저 삭제
     db.query(Notification).filter(Notification.comment_id == comment.id).delete()
 
     if comment.image_url:
@@ -137,9 +137,9 @@ def delete_comment(
 
     db.delete(comment)
     db.commit()
-    return {"message": "✅ 댓글이 삭제되었습니다."}
+    return {"message": " 댓글이 삭제되었습니다."}
 
-# ✅ 대댓글 삭제
+#  대댓글 삭제
 @router.delete("/reply/{comment_id}")
 def delete_reply(
     comment_id: int,
@@ -152,7 +152,7 @@ def delete_reply(
     if comment.user_id != current_user.id:
         raise HTTPException(status_code=403, detail="대댓글 삭제 권한이 없습니다.")
 
-    # 🔁 관련 알림 먼저 삭제
+    #  관련 알림 먼저 삭제
     db.query(Notification).filter(Notification.comment_id == comment.id).delete()
 
     if comment.image_url:
@@ -162,9 +162,9 @@ def delete_reply(
 
     db.delete(comment)
     db.commit()
-    return {"message": "✅ 대댓글이 삭제되었습니다."}
+    return {"message": " 대댓글이 삭제되었습니다."}
 
-# ✅ 댓글 수정
+#  댓글 수정
 @router.patch("/{comment_id}", response_model=CommentResponse)
 async def update_comment(
     comment_id: int,
@@ -198,7 +198,7 @@ async def update_comment(
     db.refresh(comment)
     return comment
 
-# ✅ 댓글 ID로 조회
+#  댓글 ID로 조회
 @router.get("/comment/{comment_id}", response_model=CommentResponse)
 def get_comment_by_id(comment_id: int, db: Session = Depends(get_db)):
     comment = db.query(Comment).filter(Comment.id == comment_id).first()
@@ -208,7 +208,7 @@ def get_comment_by_id(comment_id: int, db: Session = Depends(get_db)):
         comment.nickname = "탈퇴한 사용자"
     return comment
 
-# ✅ 전체 댓글 목록 조회
+#  전체 댓글 목록 조회
 @router.get("/", response_model=List[CommentResponse])
 def get_all_comments(db: Session = Depends(get_db)):
     comments = db.query(Comment).all()

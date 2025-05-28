@@ -16,7 +16,7 @@ class CommentResponse(BaseModel):
     image_url: Optional[str] = None
     parent_id: Optional[int] = None
     created_at: datetime
-    user_id: int  # ✅ 수정 완료
+    user_id: int  #  수정 완료
     nickname: Optional[str] = None
     replies: Optional[List["CommentResponse"]] = []
 

@@ -9,7 +9,7 @@ class Root(DeclarativeBase):
     pass
 
 
-# 📌 User 모델 (사용자)
+#  User 모델 (사용자)
 class User(Root):
     __tablename__ = "users"
 
@@ -18,7 +18,7 @@ class User(Root):
     hashed_password = Column(String(128), nullable=False)
     nickname = Column(String(16), unique=True, nullable=False)
     is_admin = Column(Integer, default=0)
-    is_active = Column(Integer, default=1)  # ✅ 정지 여부 추가
+    is_active = Column(Integer, default=1)  #  정지 여부 추가
     is_banned = Column(Integer, default=0)  # 0: 정상, 1: 정지
     is_deleted = Column(Boolean, default=False)
 
@@ -27,7 +27,7 @@ class User(Root):
     comments = relationship("Comment", back_populates="owner")
 
 
-# 📌 Post 모델 (게시글)
+#  Post 모델 (게시글)
 class Post(Root):
     __tablename__ = "posts"
 
@@ -42,7 +42,7 @@ class Post(Root):
     comments = relationship("Comment", back_populates="post", cascade="all, delete")
 
 
-# 📌 Comment 모델 (댓글)
+#  Comment 모델 (댓글)
 class Comment(Root):
     __tablename__ = "comments"
 
@@ -59,7 +59,7 @@ class Comment(Root):
     parent = relationship("Comment", remote_side=[id], backref="replies")
     owner = relationship("User", back_populates="comments")
 
-# 📌 Notification 모델 (알림)
+#  Notification 모델 (알림)
 class Notification(Root):
     __tablename__ = "notifications"
 

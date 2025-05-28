@@ -8,10 +8,10 @@ from datetime import datetime, timedelta
 from jose import jwt, JWTError
 from fastapi.security import OAuth2PasswordBearer
 
-# 🔒 비밀번호 암호화 설정
+#  비밀번호 암호화 설정
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-# 🔐 JWT 설정
+#  JWT 설정
 SECRET_KEY = "your_secret_key"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 1440
@@ -23,7 +23,7 @@ router = APIRouter(
     tags=["auth"]
 )
 
-# 🧩 Pydantic 모델 정의
+#  Pydantic 모델 정의
 class UserCreate(BaseModel):
     user_id: str
     password: str
@@ -40,21 +40,21 @@ class UserInfo(BaseModel):
     is_admin: bool
     is_banned: bool
 
-# 🔧 비밀번호 처리
+#  비밀번호 처리
 def hash_password(password: str) -> str:
     return pwd_context.hash(password)
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     return pwd_context.verify(plain_password, hashed_password)
 
-# 🔑 JWT 토큰 생성
+#  JWT 토큰 생성
 def create_access_token(data: dict, expires_delta: timedelta = None) -> str:
     to_encode = data.copy()
     expire = datetime.utcnow() + (expires_delta or timedelta(minutes=15))
     to_encode.update({"exp": expire})
     return jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
 
-# 🧾 회원가입 API
+#  회원가입 API
 @router.post("/register")
 def signup(user: UserCreate, db: Session = Depends(get_db)):
     if len(user.user_id) > 16 or len(user.password) > 20 or len(user.nickname) > 16:
@@ -73,12 +73,12 @@ def signup(user: UserCreate, db: Session = Depends(get_db)):
 
     return {"message": "회원가입 성공"}
 
-# 🔓 로그인 API
+#  로그인 API
 @router.post("/login")
 def login(user: UserLogin, db: Session = Depends(get_db)):
     db_user = db.query(User).filter(
         User.user_id == user.user_id,
-        User.is_deleted == False  # ✅ 탈퇴하지 않은 사용자만 로그인 가능
+        User.is_deleted == False  #  탈퇴하지 않은 사용자만 로그인 가능
     ).first()
 
     if not db_user or not verify_password(user.password, db_user.hashed_password):
@@ -108,7 +108,7 @@ def login(user: UserLogin, db: Session = Depends(get_db)):
         "is_admin": db_user.is_admin
     }
 
-# 👤 현재 사용자 정보 가져오기 (의존성)
+#  현재 사용자 정보 가져오기 (의존성)
 def get_current_user(db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)) -> UserInfo:
     credentials_exception = HTTPException(
         status_code=401,
@@ -131,7 +131,7 @@ def get_current_user(db: Session = Depends(get_db), token: str = Depends(oauth2_
     user = db.query(User).filter(
         User.id == user_pk,
         User.user_id == user_id,
-        User.is_deleted == False  # ✅ 탈퇴한 유저는 인증 실패 처리
+        User.is_deleted == False  #  탈퇴한 유저는 인증 실패 처리
     ).first()
 
     if user is None:
@@ -148,7 +148,7 @@ def get_current_user(db: Session = Depends(get_db), token: str = Depends(oauth2_
         is_banned=user.is_banned
     )
 
-# ✏️ 닉네임 변경 API
+#  닉네임 변경 API
 @router.put("/change-nickname")
 def change_nickname(new_nickname: str, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
     credentials_exception = HTTPException(

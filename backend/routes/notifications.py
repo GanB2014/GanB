@@ -12,20 +12,20 @@ router = APIRouter(
     tags=["notifications"]
 )
 
-# 🔔 알림 응답 모델
+#  알림 응답 모델
 class NotificationResponse(BaseModel):
     id: int
     type: str
     message: str
-    post_id: Optional[int] = None     # ✅ 이 두 줄 추가
-    comment_id: Optional[int] = None  # ✅
+    post_id: Optional[int] = None     #  이 두 줄 추가
+    comment_id: Optional[int] = None  # 
     is_read: bool
     created_at: datetime
 
     class Config:
         from_attributes = True
 
-# ✅ 내 알림 목록 조회
+#  내 알림 목록 조회
 @router.get("/", response_model=List[NotificationResponse])
 def get_my_notifications(
     db: Session = Depends(get_db),
@@ -36,7 +36,7 @@ def get_my_notifications(
 
 from fastapi import Path
 
-# ✅ 알림 읽음 처리
+#  알림 읽음 처리
 @router.patch("/read/{notification_id}")
 def mark_notification_as_read(
     notification_id: int = Path(..., description="읽음 처리할 알림의 ID"),
@@ -56,9 +56,9 @@ def mark_notification_as_read(
 
     notification.is_read = True
     db.commit()
-    return {"message": "✅ 알림이 읽음 처리되었습니다."}
+    return {"message": " 알림이 읽음 처리되었습니다."}
 
-# ✅ 전체 알림 읽음 처리
+#  전체 알림 읽음 처리
 @router.patch("/read-all")
 def mark_all_notifications_as_read(
     db: Session = Depends(get_db),
@@ -74,11 +74,11 @@ def mark_all_notifications_as_read(
 
     db.commit()
     return {
-        "message": "✅ 모든 알림이 읽음 처리되었습니다.",
+        "message": " 모든 알림이 읽음 처리되었습니다.",
         "updated": len(notifications)
     }
 
-# ✅ 읽지 않은 알림 개수 조회
+#  읽지 않은 알림 개수 조회
 @router.get("/unread-count")
 def get_unread_notification_count(
     db: Session = Depends(get_db),
@@ -90,7 +90,7 @@ def get_unread_notification_count(
     ).count()
     return {"unread_count": count}
 
-# ✅ 전체 알림 삭제
+#  전체 알림 삭제
 @router.delete("/all")
 def delete_all_notifications(
     db: Session = Depends(get_db),
@@ -102,9 +102,9 @@ def delete_all_notifications(
 
     db.commit()
 
-    return {"message": f"✅ 모든 알림이 삭제되었습니다. (총 {deleted_count}개)"}
+    return {"message": f" 모든 알림이 삭제되었습니다. (총 {deleted_count}개)"}
 
-# ✅ 개별 알림 삭제
+#  개별 알림 삭제
 @router.delete("/{notification_id}")
 def delete_notification(
     notification_id: int,
@@ -122,7 +122,7 @@ def delete_notification(
     db.delete(notification)
     db.commit()
 
-    return {"message": "✅ 알림이 삭제되었습니다."}
+    return {"message": " 알림이 삭제되었습니다."}
 
 
 

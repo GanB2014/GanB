@@ -25,7 +25,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Base 클래스 생성 (한 번만 정의)
 Base = declarative_base()
 
-# ✅ MySQL Connector 방식 (MySQL 직접 연결용)
+#  MySQL Connector 방식 (MySQL 직접 연결용)
 def get_connection():
     """
     MySQL Connector를 사용하여 데이터베이스에 직접 연결
@@ -44,7 +44,7 @@ def get_connection():
         print(f"Error: {err}")
         return None
 
-# ✅ SQLAlchemy 세션 의존성 함수 (SQLAlchemy 세션용)
+#  SQLAlchemy 세션 의존성 함수 (SQLAlchemy 세션용)
 def get_db():
     """
     SQLAlchemy 세션을 반환하는 의존성 함수

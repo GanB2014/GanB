@@ -14,7 +14,7 @@ router = APIRouter(
 class NicknameUpdate(BaseModel):
     nickname: str
 
-# ✅ 닉네임 변경
+#  닉네임 변경
 @router.patch("/nickname")
 def update_nickname(
     data: NicknameUpdate,
@@ -29,7 +29,7 @@ def update_nickname(
     db.commit()
     db.refresh(user)
 
-    # ✅ 닉네임 반영된 새 토큰 발급
+    #  닉네임 반영된 새 토큰 발급
     new_token = create_access_token({
         "sub": user.user_id,
         "nickname": user.nickname,
@@ -43,7 +43,7 @@ def update_nickname(
         "access_token": new_token
     }
 
-# ✍️ 내가 쓴 글 목록 조회
+#  내가 쓴 글 목록 조회
 @router.get("/my-posts")
 def get_my_posts(
     page: int = Query(1, ge=1),
@@ -70,7 +70,7 @@ def get_my_posts(
         "current_page": page
     }
 
-# 💬 내가 쓴 댓글 목록 조회
+#  내가 쓴 댓글 목록 조회
 @router.get("/my-comments")
 def get_my_comments(
     page: int = Query(1, ge=1),

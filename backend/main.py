@@ -12,7 +12,7 @@ def startup():
     create_all_database()
 
 
-# ✅ CORS 설정: 특정 도메인에서의 접근을 허용
+#  CORS 설정: 특정 도메인에서의 접근을 허용
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # React 클라이언트가 http://localhost:3000에서 동작한다고 가정
@@ -21,7 +21,7 @@ app.add_middleware(
     allow_headers=["*"],  # 모든 HTTP 헤더 허용
 )
 
-# ✅ 라우터 등록: 게시글, 댓글, 파일 업로드 라우터를 앱에 포함
+#  라우터 등록: 게시글, 댓글, 파일 업로드 라우터를 앱에 포함
 app.include_router(posts.router, tags=["posts"])
 app.include_router(upload.router, tags=["uploads"])
 app.include_router(comments.router, tags=["comments"])
@@ -29,7 +29,7 @@ app.include_router(auth.router, tags=["auth"])
 app.include_router(admin.router) # 관리자 전용 라우터
 app.include_router(notifications.router, tags=["notifications"])
 
-# ✅ 업로드된 이미지 접근 가능하게 설정
+#  업로드된 이미지 접근 가능하게 설정
 # `/uploads` 경로로 업로드된 파일에 접근할 수 있도록 StaticFiles 설정
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 

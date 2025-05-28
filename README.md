@@ -1,4 +1,4 @@
-# 📌 커뮤니티 기반 SNS 웹사이트
+# 커뮤니티 기반 SNS 웹사이트
 
 ## 📖 프로젝트 개요
 
@@ -15,52 +15,51 @@
 📁 gproject/
 ├── 📁 backend/
 │   ├── 📜 .env                        # 환경 변수 설정
-│   ├── 📜 alembic.ini                 # Alembic 설정 파일
-│   ├── 📜 requirements.txt            # Python 의존성
-│   ├── 📜 database.py                 # DB 세션 및 연결
-│   ├── 📜 main.py                     # FastAPI 진입점
-│   ├── 📜 models.py                   # SQLAlchemy 모델
-│   ├── 📜 schemas.py                  # Pydantic 스키마
-│   ├── 📁 alembic/                    # 마이그레이션 폴더
-│   ├── 📁 uploads/                    # 업로드된 이미지 저장
-│   ├── 📁 venv/                       # 가상환경
-│   └── 📁 routes/
-│       ├── 📜 admin.py                # 관리자 기능
-│       ├── 📜 auth.py                 # 로그인/회원가입
-│       ├── 📜 comments.py             # 댓글/대댓글 기능
-│       ├── 📜 notifications.py        # 알림 기능
-│       ├── 📜 posts.py                # 게시글 CRUD
-│       ├── 📜 upload.py               # 이미지 업로드
-│       └── 📜 user.py                 # 프로필, 내 글/댓글
+│   ├── 📜 alembic.ini                 # Alembic 설정 파일 (마이그레이션 도구)
+│   ├── 📜 requirements.txt            # 백엔드 의존성 목록
+│   ├── 📜 database.py                 # DB 연결 및 세션 관리
+│   ├── 📜 main.py                     # FastAPI 앱 진입점
+│   ├── 📜 models.py                   # SQLAlchemy 모델 정의
+│   ├── 📜 schemas.py                  # Pydantic 스키마 정의
+│   ├── 📁 alembic/                    # DB 마이그레이션 파일들
+│   ├── 📁 uploads/                    # 업로드된 이미지 저장 디렉토리
+│   └── 📁 routes/                     # API 라우터 모음
+│       ├── 📜 admin.py                # 관리자 기능 API
+│       ├── 📜 auth.py                 # 회원가입 및 로그인 API
+│       ├── 📜 comments.py             # 댓글 및 대댓글 API
+│       ├── 📜 notifications.py        # 알림 기능 API
+│       ├── 📜 posts.py                # 게시글 CRUD API
+│       ├── 📜 upload.py               # 이미지 업로드 API
+│       └── 📜 user.py                 # 사용자 프로필 및 작성글/댓글 API
 
 ├── 📁 frontend/
-│   ├── 📜 package.json                # npm 의존성 목록
-│   ├── 📜 package-lock.json           # npm 버전 고정
-│   ├── 📜 .gitignore                  # Git 무시 설정
-│   ├── 📜 README.md                   # 프론트엔드 README
-│   ├── 📁 public/                     # 정적 파일 (index.html 등)
-│   ├── 📁 node_modules/               # 의존성 모듈
+│   ├── 📜 package.json                # 프론트엔드 의존성 정의
+│   ├── 📜 package-lock.json           # 의존성 버전 고정
+│   ├── 📜 .gitignore                  # Git에서 제외할 파일 설정
+│   ├── 📜 README.md                   # 프론트엔드 설명 문서
+│   ├── 📁 public/                     # 정적 리소스 (index.html 등)
+│   ├── 📁 node_modules/               # 설치된 npm 패키지
 │   └── 📁 src/
-│       ├── 📜 index.js                # 앱 진입점
-│       ├── 📜 index.css               # 전체 스타일
-│       ├── 📜 App.js                  # 라우팅 및 전체 구조
-│       ├── 📁 api/                    # API 호출 모듈
+│       ├── 📜 index.js                # 앱 렌더링 진입점
+│       ├── 📜 index.css               # 전역 CSS 스타일
+│       ├── 📜 App.js                  # 전체 라우팅 및 레이아웃 구성
+│       ├── 📁 api/                    # 백엔드 API 호출 함수 정의
 │       ├── 📁 context/
-│       │   └── 📜 AuthContext.js      # 로그인 상태 전역 관리
+│       │   └── 📜 AuthContext.js      # 로그인 상태 관리 컨텍스트
 │       ├── 📁 components/
-│       │   ├── 📜 NotificationDropdown.js  # 알림 드롭다운
-│       │   ├── 📜 PostDetail.js       # 게시글 상세 (컴포넌트)
-│       │   └── 📜 PostItem.js         # 게시글 목록 항목
+│       │   ├── 📜 NotificationDropdown.js  # 알림 드롭다운 UI
+│       │   ├── 📜 PostDetail.js       # 게시글 + 댓글 컴포넌트
+│       │   └── 📜 PostItem.js         # 게시글 리스트의 단일 항목
 │       └── 📁 pages/
-│           ├── 📜 PostList.js         # 게시글 목록
-│           ├── 📜 PostDetail.js       # 게시글 + 댓글 보기
-│           ├── 📜 CreatePost.js       # 글 작성
-│           ├── 📜 EditPost.js         # 글 수정
-│           ├── 📜 MyProfile.js        # 내 글/댓글/닉네임 변경
-│           ├── 📜 Register.js         # 회원가입
+│           ├── 📜 PostList.js         # 게시글 목록 페이지
+│           ├── 📜 PostDetail.js       # 게시글 상세 페이지 (댓글 포함)
+│           ├── 📜 CreatePost.js       # 게시글 작성 페이지
+│           ├── 📜 EditPost.js         # 게시글 수정 페이지
+│           ├── 📜 MyProfile.js        # 내 글/댓글/닉네임 변경 페이지
+│           ├── 📜 Register.js         # 회원가입 페이지
 │           ├── 📜 Notifications.js    # 전체 알림 보기
-│           ├── 📜 AdminUserPage.js    # 관리자 - 사용자 관리
-│           └── 📜 AdminPostPage.js    # 관리자 - 게시글/댓글 관리
+│           ├── 📜 AdminUserPage.js    # 관리자 - 유저 관리 페이지
+│           └── 📜 AdminPostPage.js    # 관리자 - 게시글 및 댓글 관리
 
 ```
 

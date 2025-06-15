@@ -14,7 +14,7 @@
 ```
 📁 gproject/
 ├── 📁 backend/
-│   ├── 📜 .env                        # 환경 변수 설정
+│   ├── 📜 .env.example                # 환경 변수 샘플 파일 (버전 관리)
 │   ├── 📜 alembic.ini                 # Alembic 설정 파일 (마이그레이션 도구)
 │   ├── 📜 requirements.txt            # 백엔드 의존성 목록
 │   ├── 📜 database.py                 # DB 연결 및 세션 관리
@@ -186,14 +186,6 @@ npm start
 - MySQL 테이블 생성은 Alembic 또는 직접 models.py 기준으로 실행
 - is_deleted가 True인 유저는 삭제된 유저로 간주하며 게시글/댓글에서 '탈퇴한 사용자'로 표시됨
 
-
-- .env 파일에는 아래와 같은 정보가 들어가야 합니다:
-```bash
-- SECRET_KEY=your_secret
-- ALGORITHM=HS256
-- MYSQL_HOST=localhost
-- MYSQL_PORT=3306
-- MYSQL_USER=root
-- MYSQL_PASSWORD=your_password
-- MYSQL_DATABASE=gproject_db
+- 환경변수 설정은 `backend/.env.example` 파일을 참고하여 `.env` 파일을 생성하세요.
+- `.env` 파일은 보안상 버전 관리에서 제외됩니다.
 ```
